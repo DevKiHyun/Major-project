@@ -1,7 +1,7 @@
 import os
 
 def disk_size(path):
-    total = os.path.getsize(path)
+    total = 0 # when you use linux, total = os.path.getsize(path)
     if os.path.isfile(path) == True :
         total = os.path.getsize(path)
         print "{0:<7} {1}".format(total, path)
