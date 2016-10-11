@@ -1,3 +1,0 @@
-S = []
-
-print type(S)
