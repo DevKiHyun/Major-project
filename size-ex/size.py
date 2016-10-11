@@ -12,7 +12,7 @@ def disk_size(path):
         print "{0:<7} {1}".format(total, path)
     return total
 
-path = '/home/namkihyun/Major-project'
+path = '/home/namkihyun/Major-project/size-ex'
 if os.path.exists(path) == True:
     print ""
     print disk_size(path)
