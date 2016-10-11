@@ -1,7 +1,7 @@
 import os
 
 def disk_size(path):
-    total = 0
+    total = os.path.getsize(path)
     if os.path.isfile(path) == True :
         total = os.path.getsize(path)
         print "{0:<7} {1}".format(total, path)
@@ -12,7 +12,7 @@ def disk_size(path):
         print "{0:<7} {1}".format(total, path)
     return total
 
-path = '/home/namkihyun/Major-project/size-ex'
+path = raw_input()
 if os.path.exists(path) == True:
     print ""
     print disk_size(path)
