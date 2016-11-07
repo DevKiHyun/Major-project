@@ -66,7 +66,6 @@ def Radix(A):
         A = zero + one + two + three + four + five + six + seven + eight + nine
         if cnt == n :
             end = time.clock()
-            print A
             return (nRadixcompare, nRadixswap, end - start)
         i = i + 1
         cnt = 0
