@@ -1,5 +1,5 @@
-def quickSelect (A, k) :
-    S = [], L = [] , M = []
+def quickSelect (A,k) :
+    S, M , L = [],[],[]
     p = A[0]
     #A -> S,M,L
 
@@ -8,12 +8,12 @@ def quickSelect (A, k) :
         elif A[i] > p : L.append(A[i])
         else : M.append(A[i])
     if k <= len(S) : quickSelect(S,k)
-    elif k > len(S) + len(M) : quickSelect(L, k-len(S)-len(L))
+    elif k > len(S) + len(M) : quickSelect(L, k-len(S)-len(M))
     else : print p
 
 
 A = [1,2,4,5,1,25,1361,124]
-k = 2
+k = 6
 quickSelect(A,k)
 
 #Bestcase input A -> S,M,L |S|,|L| ~ |A|/2
