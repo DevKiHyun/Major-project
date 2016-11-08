@@ -1,6 +1,5 @@
-import math
+in_file = open('analyze_sort.txt', 'a')
 
-
-cnt = int(math.log10(1400))
-
-print cnt
+in_file.write('\n'+'hi' + ' ')
+in_file.write(str(125) + ' ')
+in_file.write(str(125) + ' ')
