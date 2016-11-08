@@ -2,7 +2,7 @@ Data N : 100
 Bubble: Compare 4950 Swap 2346 time 0.000583
 Heap: Compare 3282 Swap 640 time 0.000217
 Selection: Compare 5050 Swap 100 time 0.000265
-Insertion: Compare 4950 Swap 0 time 0.000412
+Insertion: Compare 2520 Swap 2421 time 0.000412
 Merge: Compare 1267 Swap 0 time 0.000439
 Quick: Compare 738 Swap 64 time 6.8e-05
 Radix: Compare 3900 Swap 0 time 0.000402
@@ -11,7 +11,7 @@ Data N : 200
 Bubble: Compare 19900 Swap 10082 time 0.002016
 Heap: Compare 7782 Swap 1481 time 0.000526
 Selection: Compare 20100 Swap 200 time 0.001045
-Insertion: Compare 19900 Swap 0 time 0.001112
+Insertion: Compare 9322 Swap 9123 time 0.001112
 Merge: Compare 2835 Swap 0 time 0.000471
 Quick: Compare 1681 Swap 133 time 0.000199
 Radix: Compare 7800 Swap 0 time 0.000426
@@ -20,7 +20,7 @@ Data N : 300
 Bubble: Compare 44850 Swap 22507 time 0.009592
 Heap: Compare 12714 Swap 2395 time 0.001331
 Selection: Compare 45150 Swap 300 time 0.005645
-Insertion: Compare 44850 Swap 0 time 0.005088
+Insertion: Compare 21612 Swap 21313 time 0.005088
 Merge: Compare 4523 Swap 0 time 0.001587
 Quick: Compare 2698 Swap 201 time 0.000522
 Radix: Compare 11700 Swap 0 time 0.001258
@@ -29,7 +29,7 @@ Data N : 700
 Bubble: Compare 244650 Swap 123995 time 0.025838
 Heap: Compare 35058 Swap 6470 time 0.002336
 Selection: Compare 245350 Swap 700 time 0.012411
-Insertion: Compare 244650 Swap 0 time 0.01315
+Insertion: Compare 125219 Swap 124520 time 0.01315
 Merge: Compare 11911 Swap 0 time 0.002366
 Quick: Compare 7355 Swap 528 time 0.000597
 Radix: Compare 27300 Swap 0 time 0.001212
@@ -38,7 +38,7 @@ Data N : 1000
 Bubble: Compare 499500 Swap 247639 time 0.099758
 Heap: Compare 52752 Swap 9677 time 0.006846
 Selection: Compare 500500 Swap 1000 time 0.038878
-Insertion: Compare 499500 Swap 0 time 0.030011
+Insertion: Compare 256650 Swap 255051 time 0.030011
 Merge: Compare 17131 Swap 0 time 0.002587
 Quick: Compare 11089 Swap 819 time 0.00094
 Radix: Compare 52000 Swap 0 time 0.002278
@@ -47,7 +47,7 @@ Data N : 5000
 Bubble: Compare 12497500 Swap 6106197 time 1.318451
 Heap: Compare 335754 Swap 60386 time 0.022267
 Selection: Compare 12502500 Swap 5000 time 0.690366
-Insertion: Compare 12497500 Swap 0 time 0.718869
+Insertion: Compare 6131399 Swap 6126400 time 0.718869
 Merge: Compare 106011 Swap 0 time 0.016499
 Quick: Compare 68551 Swap 6529 time 0.006252
 Radix: Compare 260000 Swap 0 time 0.012618
@@ -56,7 +56,7 @@ Data N : 8000
 Bubble: Compare 31996000 Swap 15979773 time 3.458295
 Heap: Compare 564996 Swap 101239 time 0.038335
 Selection: Compare 32004000 Swap 8000 time 1.768166
-Insertion: Compare 31996000 Swap 0 time 1.945483
+Insertion: Compare 15901902 Swap 15893903 time 1.945483
 Merge: Compare 173055 Swap 0 time 0.026617
 Quick: Compare 114917 Swap 12105 time 0.010822
 Radix: Compare 416000 Swap 0 time 0.018255
@@ -65,7 +65,7 @@ Data N : 10000
 Bubble: Compare 49995000 Swap 24657281 time 5.610275
 Heap: Compare 725964 Swap 129673 time 0.046572
 Selection: Compare 50005000 Swap 10000 time 2.885778
-Insertion: Compare 49995000 Swap 0 time 3.121469
+Insertion: Compare 25255875 Swap 25245876 time 3.121469
 Merge: Compare 227023 Swap 0 time 0.041354
 Quick: Compare 146522 Swap 16209 time 0.015683
 Radix: Compare 520000 Swap 0 time 0.026711
@@ -74,7 +74,7 @@ Data N : 25000
 Bubble: Compare 312487500 Swap 155998493 time 36.071332
 Heap: Compare 1919856 Swap 339207 time 0.120701
 Selection: Compare 312512500 Swap 25000 time 18.316592
-Insertion: Compare 312487500 Swap 0 time 20.891006
+Insertion: Compare 156692302 Swap 156667303 time 20.891006
 Merge: Compare 615427 Swap 0 time 0.091469
 Quick: Compare 395796 Swap 53490 time 0.038454
 Radix: Compare 1300000 Swap 0 time 0.061868
