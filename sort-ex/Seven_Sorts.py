@@ -229,7 +229,7 @@ in_file = open('sort.txt', 'r')
 array = list(in_file.read().split())
 in_file = open('analyze_sort.txt', 'a')
 n = len(array)
-in_file.write(str(n)+ ' ')
+in_file.write('Data N : ' +str(n)+ '\n')
 A = map(int, array)
 B = map(int, array)
 C = map(int, array)
@@ -241,22 +241,22 @@ G = map(int, array)
 a,b,c, arr = Bubble(A)
 print "Bubble : Compare = %d Swap= %d  time= %f" % (a,b,c)
 print check_sort(arr)
-in_file.write(str(c)+ ' ')
+in_file.write("Bubble: " + "Compare " +str(a)+ " Swap " +str(b)+ " time "+str(c)+'\n')
 
 a,b,c, arr = Heap(A)
 print "Heap : Compare = %d Swap= %d  time= %f" % (a,b,c)
 print check_sort(arr)
-in_file.write(str(c)+ ' ')
+in_file.write("Heap: " + "Compare " +str(a)+ " Swap " +str(b)+ " time "+str(c)+'\n')
 
 a,b,c, arr = Selection(A)
 print "Selection : Compare = %d Swap= %d  time= %f" % (a,b,c)
 print check_sort(arr)
-in_file.write(str(c)+ ' ')
+in_file.write("Selection: " + "Compare " +str(a)+ " Swap " +str(b)+ " time "+str(c)+'\n')
 
 a,b,c, arr = Insertion(A)
 print "Insertion : Compare = %d Swap= %d  time= %f" % (a,b,c)
 print check_sort(arr)
-in_file.write(str(c)+ ' ')
+in_file.write("Insertion: " + "Compare " +str(a)+ " Swap " +str(b)+ " time "+str(c)+'\n')
 
 global nMergecompare
 global nMergeswap
@@ -269,7 +269,7 @@ end = time.clock()
 c = end - start
 print "Merge : Compare = %d Swap= %d  time= %f" % (a,b,c)
 print check_sort(arr)
-in_file.write(str(c)+ ' ')
+in_file.write("Merge: " + "Compare " +str(a)+ " Swap " +str(b)+ " time "+str(c)+'\n')
 
 global nQuickcompare
 global nQuickswap
@@ -279,9 +279,9 @@ nQuickswap = 0
 a,b,c, arr = Quick(A,0,len(A)-1)
 print "Quick : Compare = %d Swap= %d  time= %f" % (a,b,c)
 print check_sort(arr)
-in_file.write(str(c)+ ' ')
+in_file.write("Quick: " + "Compare " +str(a)+ " Swap " +str(b)+ " time "+str(c)+'\n')
 
 a,b,c, arr = Radix(A)
 print "Radix : Compare = %d Swap= %d  time= %f" % (a,b,c)
 print check_sort(arr)
-in_file.write(str(c)+ ' ' + '\n')
+in_file.write("Radix: " + "Compare " +str(a)+ " Swap " +str(b)+ " time "+str(c)+'\n')
