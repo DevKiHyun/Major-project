@@ -72,14 +72,18 @@ def Insertion(A):
     nInsert_compare = 0
     nInsert_swap = 0
     for i in range(1,len(A)):
-        j = i
-        for j in range(i,0, -1):
+        j = i - 1
+        k = A[i]
+        while A[j] > k and j >= 0:
             nInsert_compare = nInsert_compare + 1
-            if A[j] < A[j-1]:
-                nInsert_swap = nInsert_swap + 1
-                A[j], A[j-1] = A[j-1], A[j]
+            nInsert_swap = nInsert_swap + 1
+            A[j+1] = A[j]
+            j = j -1
+        A[j+1] = k
     end = time.clock()
-    return (nInsert_compare, nInsert_swap, end-start, A)
+
+    return nInsert_compare, nInsert_swap, end-start , A
+
 
 def Merge_sort(A,first,last):
 
@@ -238,22 +242,22 @@ E = map(int, array)
 F = map(int, array)
 G = map(int, array)
 
-a,b,c, arr = Bubble(A)
+a,b,c,arr = Bubble(A)
 print "Bubble : Compare = %d Swap= %d  time= %f" % (a,b,c)
 print check_sort(arr)
 in_file.write("Bubble: " + "Compare " +str(a)+ " Swap " +str(b)+ " time "+str(c)+'\n')
 
-a,b,c, arr = Heap(A)
+a,b,c,arr = Heap(A)
 print "Heap : Compare = %d Swap= %d  time= %f" % (a,b,c)
 print check_sort(arr)
 in_file.write("Heap: " + "Compare " +str(a)+ " Swap " +str(b)+ " time "+str(c)+'\n')
 
-a,b,c, arr = Selection(A)
+a,b,c,arr = Selection(A)
 print "Selection : Compare = %d Swap= %d  time= %f" % (a,b,c)
 print check_sort(arr)
 in_file.write("Selection: " + "Compare " +str(a)+ " Swap " +str(b)+ " time "+str(c)+'\n')
 
-a,b,c, arr = Insertion(A)
+a,b,c,arr = Insertion(A)
 print "Insertion : Compare = %d Swap= %d  time= %f" % (a,b,c)
 print check_sort(arr)
 in_file.write("Insertion: " + "Compare " +str(a)+ " Swap " +str(b)+ " time "+str(c)+'\n')
