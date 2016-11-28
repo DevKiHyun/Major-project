@@ -1,4 +1,7 @@
+import time
+
 def findSubsequence(A):
+    start = time.clock()
     LIS = [0]*len(A)
     for i in range (len(A)):
         max = -1
@@ -16,6 +19,7 @@ def findSubsequence(A):
         if result < LIS[i] :
             result = LIS[i]
             index = i
+    '''
 
     path = str(A[index]) + " "
     res = result -1
@@ -26,8 +30,15 @@ def findSubsequence(A):
 
     print "Longest Increasing subsequence: %d" %(result)
     print "Actial Element: " + path
+    '''
+    end = time.clock()
+    return end - start, LIS
 
-A = raw_input().split()
-A = map(int,A)
+in_file = open('LIS.txt', 'r')
+A = list(in_file.read().split())
+A = map(int, A)
 
-findSubsequence(A)
+
+time, LIS_V = findSubsequence(A)
+
+print time, LIS_V
