@@ -1,32 +1,41 @@
 import time
 
-def LIS(A):
+def findSubsequence(A):
     start = time.clock()
-    S = [1]*1 + [0]*(len(A)-1)
-    for j in range(1,len(A)):
-        temp = A[j]
-        i = j-1
-        if A[j] < A[j-1] :
-            while temp < A[i] :
-                if i == 0:
-                    break
-                i = i - 1
-            if i == 0 :
-                S[j] = S[i]
-            else :
-                S[j] = S[i] + 1
-        elif A[j] > A[j-1] :
-            S[j] = S[j-1] + 1
-        elif A[j] == A[j-1] :
-            S[j] == S[j-1]
-    end = time.clock()
-    LIS = max(S)
-    return end - start, S
+    LIS = [0]*len(A)
+    for i in range (len(A)):
+        max = -1
+        for j in range(i):
+            if A[i] > A[j] :
+                if max == -1 or max < LIS[j] + 1 :
+                    max = 1 + LIS[j]
+        if max == -1 :
+            max = 1;
+        LIS[i] = max;
 
-A = [7, 6, 5, 4, 3, 2, 1, 8, 3, 1, 4, 2, 3, 4, 7, 5, 0, 2]
+    result = -1
+    index = -1
+    for i in range(len(LIS)) :
+        if result < LIS[i] :
+            result = LIS[i]
+            index = i
+
+    path = str(A[index]) + " "
+    res = result -1
+    for i in range(index-1,-1,-1) :
+        if LIS[i] == res:
+            path = str(A[i]) + " " + path
+            res = res - 1
+
+
+
+    print path
+
+#in_file = open('LIS.txt', 'r')
+#A = list(in_file.read().split())
+
+A = [7, 6, 5, 4, 3, 2, 1, 8, 3, 1, 4, 2, 3, 4, 7, 5, 0, 2,3, 4, 7, 5]
 A = map(int, A)
 
 
-time, LIS_V = LIS(A)
-
-print time, LIS_V
+findSubsequence(A)
