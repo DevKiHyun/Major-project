@@ -43,7 +43,7 @@ def LIS(A) :
             temp = A[j]
             i = j-1
             if A[j] < A[j-1] :
-                while temp < A[i] :
+                while temp <= A[i] :
                     if i == 0:
                         break
                     i = i - 1
@@ -57,16 +57,16 @@ def LIS(A) :
                 S[j] == S[j-1]
     end = time.clock()
     LIS = max(S)
-    return end - start, LIS
+    return  LIS
 
 
 #A = raw_input().split()
-#A = [7, 6, 5, 4, 3, 2, 1, 8]
+#A = [7, 6, 5, 4, 3, 2, 1, 8, 3, 1, 4, 2, 3, 4, 7, 5, 0, 2]
 in_file = open('LIS.txt', 'r')
 A = list(in_file.read().split())
 A = map(int, A)
 
 
-time, LIS_V = LIS(A)
+LIS_V = LIS(A)
 
-print time, LIS_V
+print  LIS_V

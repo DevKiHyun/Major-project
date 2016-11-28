@@ -21,10 +21,9 @@ def LIS(A):
             S[j] == S[j-1]
     end = time.clock()
     LIS = max(S)
-    return end - start, LIS
+    return end - start, S
 
-in_file = open('LIS.txt', 'r')
-A = list(in_file.read().split())
+A = [7, 6, 5, 4, 3, 2, 1, 8, 3, 1, 4, 2, 3, 4, 7, 5, 0, 2]
 A = map(int, A)
 
 

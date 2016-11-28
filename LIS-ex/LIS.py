@@ -32,13 +32,14 @@ def findSubsequence(A):
     print "Actial Element: " + path
     '''
     end = time.clock()
-    return end - start, LIS
+    return  result
 
 in_file = open('LIS.txt', 'r')
 A = list(in_file.read().split())
+#A = [7, 6, 5, 4, 3, 2, 1, 8, 3, 1, 4, 2, 3, 4, 7, 5, 0, 2]
 A = map(int, A)
 
 
-time, LIS_V = findSubsequence(A)
+LIS_V = findSubsequence(A)
 
-print time, LIS_V
+print  LIS_V
