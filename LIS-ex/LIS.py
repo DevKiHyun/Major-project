@@ -37,13 +37,14 @@ def findSubsequence(A):
             if temp_LIS == LIS[k]:
                 output = str(A[k]) + " " + output
                 temp_LIS = temp_LIS - 1
+    print LIS
     print max_LIS
     print output
 
-in_file = open('LIS.txt', 'r')
-A = list(in_file.read().split())
+#in_file = open('LIS.txt', 'r')
+#A = list(in_file.read().split())
 
-#A = [7, 6, 5, 4, 3, 2, 1, 8, 3, 1, 4, 2, 3, 4, 7, 5, 0, 2,3, 4, 7, 5]
+A = [7, 6, 5, 4, 3, 2, 1, 8, 3, 1, 4, 2, 3, 4, 7, 5, 0, 2,3, 4, 7, 5]
 A = map(int, A)
 
 findSubsequence(A)
