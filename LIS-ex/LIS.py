@@ -1,6 +1,6 @@
 import time
 
-def findSubsequence(A):
+def LIS(A):
     start = time.clock()
     check_cnt = 0
 
@@ -15,7 +15,6 @@ def findSubsequence(A):
                 temp = LIS[j]
         if temp == 0:
             temp = 1
-
         if i == 0 :
             LIS[i] = 1
         else :
@@ -27,24 +26,28 @@ def findSubsequence(A):
         if LIS[i] == max_LIS :
             max_loca = i
 
-
-    output = ""
+    output = []
     temp_LIS = max_LIS - 1
 
     for k in range(max_loca - 1,-1,-1) :
             if LIS[k+1] == max_LIS :
-                output = str(A[k+1]) + output
+                output = [A[k+1]] + output
             if temp_LIS == LIS[k]:
-                output = str(A[k]) + " " + output
+                output = [A[k]] + output
                 temp_LIS = temp_LIS - 1
+                if temp_LIS == 0:
+                    break
+
+    output = map(str, output)
+    LIS_word = " ".join(output)
+
     print LIS
     print max_LIS
-    print output
-
-#in_file = open('LIS.txt', 'r')
-#A = list(in_file.read().split())
-
-A = [7, 6, 5, 4, 3, 2, 1, 8, 3, 1, 4, 2, 3, 4, 7, 5, 0, 2,3, 4, 7, 5]
+    print LIS_word
+'''
+in_file = open('LIS.txt', 'r')
+A = list(in_file.read().split())
+'''
+A = raw_input().split()
 A = map(int, A)
-
-findSubsequence(A)
+LIS(A)

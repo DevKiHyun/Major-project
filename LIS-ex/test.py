@@ -42,7 +42,7 @@ def LIS(A) :
         for j in range(1,len(A)):
             temp = A[j]
             i = j-1
-            '''
+            
             if j-2 != 0 and S[j-1] < S[j-2] :
                 k = j-2
                 while temp <= A[k] :
@@ -53,7 +53,7 @@ def LIS(A) :
                     S[j] = S[k]
                 else :
                     S[j] = S[k] + 1
-            '''
+
             if A[j] < A[j-1] :
                 while temp <= A[i] :
                     if i == 0:
@@ -82,13 +82,13 @@ def LIS(A) :
     return  LIS
 
 
-#A = raw_input().split()
+A = raw_input().split()
 A = [3 ,5 ,2 ,1 ,4 ,5 ,6 ,2 ,7 ,5 ,8 ,9 ]
 #in_file = open('LIS.txt', 'r')
 #A = list(in_file.read().split())
 A = map(int, A)
 
-print A
+
 LIS_V = LIS(A)
 
 print  LIS_V

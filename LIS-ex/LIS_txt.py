@@ -2,7 +2,7 @@ import random
 
 random.seed()
 
-in_file = open('LIS_1.txt', 'w')
+in_file = open('LIS.txt', 'w')
 n = int(raw_input("n= "))
 #in_file.write(str(n)+ '\n')
 for i in range(n) :
