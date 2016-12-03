@@ -1,9 +1,5 @@
-import time
 
 def LIS(A):
-    start = time.clock()
-    check_cnt = 0
-
     LIS = [1]*1 + [0]*(len(A)-1)
     for i in range (len(A)):
         temp = 0
@@ -41,13 +37,9 @@ def LIS(A):
     output = map(str, output)
     LIS_word = " ".join(output)
 
-    print LIS
     print max_LIS
     print LIS_word
-'''
-in_file = open('LIS.txt', 'r')
-A = list(in_file.read().split())
-'''
+
 A = raw_input().split()
 A = map(int, A)
 LIS(A)
