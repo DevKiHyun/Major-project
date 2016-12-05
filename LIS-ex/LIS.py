@@ -25,9 +25,9 @@ def LIS(A):
     output = []
     temp_LIS = max_LIS - 1
 
-    for k in range(max_loca - 1,-1,-1) :
-            if LIS[k+1] == max_LIS :
-                output = [A[k+1]] + output
+    for k in range(max_loca-1,-1,-1) :
+            if LIS[k] == max_LIS :
+                output = [A[k]] + output
             if temp_LIS == LIS[k]:
                 output = [A[k]] + output
                 temp_LIS = temp_LIS - 1
