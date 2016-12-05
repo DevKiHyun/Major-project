@@ -44,16 +44,16 @@ def huffman(F) :
         F[i] = x + y
         t = (i, F[i])
         insert(H,t)
-        print H
 
     sum_F = 0
     for i in range(n,2*n-1):
         sum_F = sum_F + F[i]
 
     print sum_F
-    print F
-H = []
-F = [43, 13, 12 ,16 , 9, 7]
 
+
+H = []
+F = raw_input().split()
+F = map(int, F)
 
 huffman(F)
